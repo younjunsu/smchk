@@ -107,7 +107,7 @@ function ft_step_uptime(){
 STEP="4"
     echo "######## $STEP. Started time ########"
     echo "Current dateTime "`date +%Y-%m-%d" "%T`
-    printf "%-20s%-50s%-20s%-30s\n" "TYPE" "Prcess CMD" "PID" "START-TIME"
+    printf "%-20s%-50s%-20s%-30s\n" "TYPE" "Process CMD" "PID" "START-TIME"
     echo "-------------------------------------------------------------------------------------------------------------"
     # SYSTEMD
     SYSTEM_STARTTIME=`uptime -s`
