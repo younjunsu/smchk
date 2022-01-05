@@ -25,7 +25,7 @@ fi
 
 ## Program function
 function ft_step_env(){
-STEP="1"
+    STEP="1"
     printf "#%-50s#\n" "##################################################"
     printf "#%-50s#\n" " SYSMASTER7 Maintenance Result"
     printf "#%-50s#\n" " `date +%Y-%m-%d" "%T`"
@@ -71,7 +71,7 @@ STEP="1"
 }
 
 function ft_step_version(){
-STEP="2"
+    STEP="2"
     echo "######## $STEP. SysMaster version check ########"
     echo "######## $STEP.1. JEUS ########"
     $JEUS_HOME/bin/jeusadmin -version
@@ -90,7 +90,7 @@ STEP="2"
 }
 
 function ft_step_system(){
-STEP="3"
+    STEP="3"
     echo "######## $STEP. System resource ########"
     echo "######## $STEP.1. Memory ########"
     free -g
@@ -104,7 +104,7 @@ STEP="3"
 }
 
 function ft_step_uptime(){
-STEP="4"
+    STEP="4"
     echo "######## $STEP. Started time ########"
     echo "Current dateTime "`date +%Y-%m-%d" "%T`
     printf "%-20s%-50s%-20s%-30s\n" "TYPE" "Prcess CMD" "PID" "START-TIME"
@@ -150,7 +150,7 @@ STEP="4"
 }
 
 function ft_step_portscan(){
-STEP="5"
+    STEP="5"
     echo "######## $STEP. Port check ########"
     echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    "
     netstat -nlp |grep tcp 
@@ -159,7 +159,7 @@ STEP="5"
 }
 
 function ft_step_space(){
-STEP="6"
+    STEP="6"
     echo "######## $STEP. Disk space usage ########"
     echo "######## $STEP.1. Total size ########"
     df -h
@@ -189,7 +189,7 @@ EOF
 }
 
 function ft_step_cpu(){
-STEP="7"
+    STEP="7"
     echo "######## $STEP. CPU Check ########"
     echo "######## $STEP.1. vmstat ########"
     vmstat 1 5
@@ -202,7 +202,7 @@ STEP="7"
 }
 
 function ft_step_smdb(){
-STEP="8"
+    STEP="8"
     echo "######## $STEP. SMDB Check ########"
     function SMDB_REGIMON(){
      tbsql $SMDB_ID/$SMDB_PSW @sql/smdb_regimon.sql  << EOF
@@ -215,7 +215,7 @@ EOF
 }
 echo
 function ft_step_jues(){
-SETP="9"
+    STEP="9"
     echo "######## $STEP. JEUS Check ########"
     function JEUS_MON(){
         jeusadmin -u $JEUS_ID -p $JEUS_PSW << EOF
@@ -229,7 +229,7 @@ EOF
 }
 
 function ft_step_log(){
-STEP="10"
+    STEP="10"
     echo "######## $STEP. Log check ########"
     cd $SYSMASTER_HOME
 
