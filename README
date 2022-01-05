@@ -1,0 +1,35 @@
+#-------------------------------------------------------------------------------
+# @File name      : smchk.sh
+# @Contents       : Sysmaster7
+# @Created by     : Yoon Jun Su
+# @Created date   : 2021.12.31
+# @Team           : DB Tech
+# @Modifed History 
+# ------------------------------------------------------------------------------
+# 2022.01.05 Yoon Jun Su       (Ver. 20220105)
+# ------------------------------------------------------------------------------
+
+########### Directory Structure
+smchk
+├── README
+├── smchk.sh
+└── sql
+    ├── smdb_regimon.sql
+    └── smdb_tablespace.sql
+1 directory, 4 files
+
+########### smchk.sh usage
+# Forground
+$ sh smchk.sh 
+or
+$ sh smchk.sh $RECENT_DAYS
+
+# Logfile
+$ sh smchk.sh $RECENT_DAYS > filename
+
+########### Example
+# default RECENT_DAYS = 30
+$ sh smchk.sh  > smchk_20220105.log
+
+# Recently 35 days checking
+$ sh smchk.sh 35 > smchk_20220105.log
