@@ -2,7 +2,7 @@
 ####################################################
 # SYSMASTER7 Maintenance Shell                     #
 ####################################################
- 
+반영해보기
 ## Default Configuration
 JEUS_ID=jeus
 JEUS_PSW=jeus
